@@ -1,0 +1,12 @@
+.Header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #108db8;
+}
+
+.Header a {
+  color: white;
+  padding: 1rem;
+  display: inline-block;
+}
