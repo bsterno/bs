@@ -1,19 +1,12 @@
-import { Router, Link } from 'react-static'
-import React, { Component } from 'react'
+import React from 'react'
 //
 import loadingIcon from '../../../assets/images/0kvtMLE.gif';
 import './Loading.css'
 
-class Loading extends Component {
+const loading = () => (
+  <div className="load-screen">
+    <img src={loadingIcon} />
+  </div>
+)
 
-
-  render () {
-    return (
-      <div className="load-screen">
-        <img src={loadingIcon} />
-      </div>
-    )
-  }
-};
-
-export default Loading;
+export default loading;
