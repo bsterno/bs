@@ -1,9 +1,12 @@
-import { Router, Link } from 'react-static'
 import React from 'react'
 //
+import loadingIcon from '../../../assets/images/0kvtMLE.gif';
+import './Loading.css'
 
 const loading = () => (
-  <h1>Loading...</h1>
+  <div className="load-screen">
+    <img src={loadingIcon} />
+  </div>
 )
 
 export default loading;

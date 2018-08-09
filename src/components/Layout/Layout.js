@@ -1,5 +1,6 @@
 import { Router, Link } from 'react-static'
 import React, { Component, Fragment } from 'react'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 //
 import Header from '../Navigation/Header/Header.js'
 import Routes from 'react-static-routes'
@@ -18,7 +19,12 @@ class Layout extends Component {
   render () {
     return (
       <Fragment>
-        { this.state.loading ? <Loading /> : null }
+        <ReactCSSTransitionGroup
+          transitionName="loading"
+          transitionEnterTimeout={0}
+          transitionLeaveTimeout={300}>
+          { this.state.loading ? <Loading /> : null }
+        </ReactCSSTransitionGroup>
         <Header />
         <div className="content">
           <Routes />
