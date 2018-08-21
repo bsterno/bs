@@ -7,9 +7,12 @@ import Routes from 'react-static-routes'
 import Loading from '../UI/Loading/Loading.js'
 
 class Layout extends Component {
+  constructor(props) {
+    super(props);
 
-  state = {
-    loading: true
+    this.state = {
+        loading: true
+      }
   }
 
   componentDidMount() {
