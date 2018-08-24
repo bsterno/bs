@@ -1,0 +1,36 @@
+.profile {
+  height: 80vh;
+}
+
+.profile-bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-bio h1 {
+  position: relative;
+}
+
+.profile-bio h1:before {
+  content: '';
+  position: absolute;
+  top: -10vh;
+  height: 1px;
+  width: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c1c1c;
+}
+
+.profile-bio h1:after {
+  content: '';
+  position: absolute;
+  bottom: -10vh;
+  height: 1px;
+  width: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c1c1c;
+}

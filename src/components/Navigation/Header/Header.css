@@ -1,11 +1,11 @@
-.Header {
+.header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background: #108db8;
+  background: #1c1c1c;
 }
 
-.Header a {
+.header a {
   color: white;
   padding: 1rem;
   display: inline-block;

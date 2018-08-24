@@ -1,19 +1,11 @@
 import React from 'react'
 //
+import './Profile.css'
 
 const profile = (props) => (
-  <div className="profile-container">
-    <div className="profile-image">
-      <img src="" />
-    </div>
+  <div className="row profile">
     <div className="profile-bio">
-      <h1>Name</h1>
-      <h2>Title</h2>
-      <p>About me blah blah</p>
-      <div className="profile-work">
-        <span>Work</span>
-        <span>Location</span>
-      </div>
+      <h1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Nam sed tellus id magna elementum tincidunt.</h1>
     </div>
   </div>
 )

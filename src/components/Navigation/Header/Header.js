@@ -6,7 +6,7 @@ import Logo from '../Logo/Logo.js'
 import './Header.css'
 
 export default () => (
-  <header className="Header">
+  <header className="header">
     <Logo />
     <NavigationItems />
   </header>

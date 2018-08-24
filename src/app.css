@@ -22,3 +22,9 @@ img {
   max-width: 980px;
   margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem 2rem;
+  }
+}
