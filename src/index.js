@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+//
+import 'bootstrap/dist/css/bootstrap.css';
 
 // Your top level component
 import App from './App'
