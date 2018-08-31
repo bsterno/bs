@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import moment from 'moment';
+import { Media } from 'reactstrap';
 //
+import './GithubActivities.css'
 
 class GithubActivities extends Component {
   constructor() {
@@ -16,11 +18,10 @@ class GithubActivities extends Component {
     .then(results => {
       return results.json();
     }).then(data => {
-      let eventsData = data.slice(0, 5);
+      let eventsData = data.slice(0, 8);
       this.setState({
         events: eventsData
       })
-      console.log(this.state.events);
     })
   }
 
@@ -35,8 +36,10 @@ class GithubActivities extends Component {
         return 'created a pull request in '
       } else if ( (obj.payload.ref_type === 'repository') && (term.includes('Create')) ) {
         return 'created the repository ';
-      } else if ( ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag')) && (term.includes('Create')) ) {
+      } else if ( (term.includes('Create') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag'))) ) {
         return 'created a ' + obj.payload.ref_type + ' in ';
+      } else if ( (term.includes('Delete') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag'))) ) {
+        return 'deleted a ' + obj.payload.ref_type + ' in ';
       } else {
         return term
       }
@@ -46,21 +49,28 @@ class GithubActivities extends Component {
       .map(event => {
         let eventObj = this.state.events[event];
         let typeVerbiage = defineVerbiage(eventObj, eventObj.type);
+        let timeSince = moment(eventObj.created_at).fromNow();
+        let eventLine = 'I ' + typeVerbiage + ' the repo ' + eventObj.repo.name + ' ' + timeSince;
         return (
-          <section className="row gh" key={eventObj.id}>
-            <p className="col-12">Login: {eventObj.actor.login}</p>
-            <p className="col-12">Type: {typeVerbiage}</p>
-            <p className="col-12">Repo: {eventObj.repo.name}</p>
-            <p className="col-12">Repo: {eventObj.id}</p>
-            <p className="col-12">Created: {moment(eventObj.created_at, "YYYYMMDD").fromNow()}</p>
-          </section>
+          <Media key={eventObj.id}>
+            <Media body>
+              {eventLine}
+            </Media>
+          </Media>
         );
       })
 
     return (
-      <Fragment>
-        {ghEvents}
-      </Fragment>
+      <section className="row gh">
+        <h2 className="col-12">Wonder what I've been developing lately? <a href="https://youtu.be/i-QadwBCqQw?t=67" target="_blank">Check it out</a> below</h2>
+        <div className="media-container">
+          {ghEvents}
+          <p>. . .</p>
+        </div>
+        <div className="col-12">
+          <h4>Or click <a href="https://github.com/bsterno" target="_blank">here</a> to go to my GitHub!</h4>
+        </div>
+      </section>
     )
   }
 }

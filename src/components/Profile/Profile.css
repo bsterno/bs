@@ -11,26 +11,29 @@
 
 .profile-bio h1 {
   position: relative;
+  color: #fff;
+  margin: 5vh 0;
+  padding: 5vh 0;
 }
 
 .profile-bio h1:before {
   content: '';
   position: absolute;
-  top: -10vh;
+  top: -5vh;
   height: 1px;
   width: 65px;
   left: 50%;
   transform: translateX(-50%);
-  background: #1c1c1c;
+  background: #E5E5E5;
 }
 
 .profile-bio h1:after {
   content: '';
   position: absolute;
-  bottom: -10vh;
+  bottom: -5vh;
   height: 1px;
   width: 65px;
   left: 50%;
   transform: translateX(-50%);
-  background: #1c1c1c;
+  background: #E5E5E5;
 }
