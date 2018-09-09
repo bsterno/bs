@@ -1,0 +1,19 @@
+.card {
+  border-radius: 0;
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.card .card-image-top {
+  border-radius: 0;
+}
+
+.card .card-body {
+  color: #fff;
+}
+
+.card .card-body .card-title a {
+  font-style: normal;
+}

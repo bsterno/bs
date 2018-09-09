@@ -1,5 +1,5 @@
 .profile {
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .profile-bio {
@@ -7,6 +7,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .profile-bio h1 {

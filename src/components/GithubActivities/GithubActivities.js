@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import moment from 'moment';
-import { Media } from 'reactstrap';
+import { Media, Tooltip } from 'reactstrap';
 //
 import './GithubActivities.css'
 
@@ -8,9 +8,18 @@ class GithubActivities extends Component {
   constructor() {
     super();
 
+    this.toggle = this.toggle.bind(this);
+
     this.state = {
-      events: []
+      events: [],
+      toolTipOpen: false
     }
+  }
+
+  toggle() {
+    this.setState({
+      tooltipOpen: !this.state.tooltipOpen
+    });
   }
 
   componentDidMount() {
@@ -62,13 +71,17 @@ class GithubActivities extends Component {
 
     return (
       <section className="row gh">
-        <h2 className="col-12">Wonder what I've been developing lately? <a href="https://youtu.be/i-QadwBCqQw?t=67" target="_blank">Check it out</a> below</h2>
+        <h2 className="col-12">Wonder what I've been developing lately? <a className="hover-link" href="https://youtu.be/i-QadwBCqQw?t=67" target="_blank">Check it out</a> below</h2>
         <div className="media-container">
+          <span className="tool-tip" id="ghTip">i</span>
+          <Tooltip placement="bottom" isOpen={this.state.tooltipOpen} target="ghTip" toggle={this.toggle}>
+            This feed doesn't include any contributions to private repos!
+          </Tooltip>
           {ghEvents}
           <p>. . .</p>
         </div>
         <div className="col-12">
-          <h4>Or click <a href="https://github.com/bsterno" target="_blank">here</a> to go to my GitHub!</h4>
+          <h4>Or click <a className="hover-link" href="https://github.com/bsterno" target="_blank">here</a> to go to my GitHub!</h4>
         </div>
       </section>
     )

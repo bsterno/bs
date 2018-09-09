@@ -19,8 +19,23 @@
   width: 100%;
   text-align: center;
   padding: 60px 0;
+  position: relative;
 }
 
 .media-container .media {
   padding: 10px 0;
+}
+
+.media-container .tool-tip {
+  position: absolute;
+  top: 70px;
+  left: 10%;
+}
+
+@media (max-width: 576px) {
+  .media-container .tool-tip {
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
