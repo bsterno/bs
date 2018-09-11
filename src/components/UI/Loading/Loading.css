@@ -1,6 +1,5 @@
 .load-screen {
-  background-color: #1C1C1C;
-  background-image: url('https://media.istockphoto.com/photos/vibrant-tie-dye-picture-id184372785?k=6&m=184372785&s=612x612&w=0&h=GzYhGl2L6BxHJkOWpPrlj9gUrZins4djZcKT0m5psFo=');
+  background-color: #000;
   background-size: cover;
   height: 100vh;
   width: 100vw;

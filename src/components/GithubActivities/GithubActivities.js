@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import moment from 'moment';
-import { Media, Tooltip } from 'reactstrap';
+import { Media } from 'reactstrap';
+import Feedtip from './Feedtip.js';
 //
 import './GithubActivities.css'
 
@@ -70,13 +71,10 @@ class GithubActivities extends Component {
       })
 
     return (
-      <section className="row gh">
+      <section className="row gh" id="gh">
         <h2 className="col-12">Wonder what I've been developing lately? <a className="hover-link" href="https://youtu.be/i-QadwBCqQw?t=67" target="_blank">Check it out</a> below</h2>
         <div className="media-container">
-          <span className="tool-tip" id="ghTip">i</span>
-          <Tooltip placement="bottom" isOpen={this.state.tooltipOpen} target="ghTip" toggle={this.toggle}>
-            This feed doesn't include any contributions to private repos!
-          </Tooltip>
+          <Feedtip />
           {ghEvents}
           <p>. . .</p>
         </div>

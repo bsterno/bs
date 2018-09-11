@@ -27,7 +27,7 @@ class CaseStudies extends Component {
       })
 
     return (
-      <section className="row case-studies">
+      <section className="row case-studies" id="work">
         {caseTiles}
       </section>
     )

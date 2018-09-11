@@ -1,0 +1,10 @@
+.nav-icon {
+  max-width: 20px;
+  height: auto;
+  padding: 0 !important;
+  margin: 1rem;
+}
+
+.nav-icon img {
+  vertical-align: text-top;
+}
