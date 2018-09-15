@@ -5,6 +5,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Header from '../Navigation/Header/Header.js'
 import Routes from 'react-static-routes'
 import Loading from '../UI/Loading/Loading.js'
+import Head from '../Head/Head.js'
 
 class Layout extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class Layout extends Component {
   render () {
     return (
       <Fragment>
+        <Head />
         <ReactCSSTransitionGroup
           transitionName="loading"
           transitionEnterTimeout={0}

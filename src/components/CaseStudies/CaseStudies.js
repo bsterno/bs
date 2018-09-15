@@ -4,17 +4,39 @@ import CaseStudy from './CaseStudy/CaseStudy.js'
 
 
 const caseStudyList = {
-  "Norman and Jules": "https://normanandjules.com/",
-  "Progressive Punctuation": "http://progressivepunctuation.com/",
-  "NewsCred Insights": "https://insights.newscred.com/",
-  "NewsCred": "https://www.newscred.com/",
-  "The Free Ride": "http://thefreeride.com/",
-  "Amalgam": "http://amalgam.co/",
-  "ViTA World": "http://vita.world/",
-  "InsuraMatch": "https://www.insuramatch.com/",
-  "Foray Collective": "https://www.shopforay.com/",
-  "Extra Mile": "https://extramile.thehartford.com/",
-  "Kele": "https://www.kele.com/"
+  "Norman and Jules": {
+    "url": "https://normanandjules.com/",
+  },
+  "Progressive Punctuation": {
+    "url": "http://progressivepunctuation.com/"
+  },
+  "NewsCred Insights": {
+    "url": "https://insights.newscred.com/"
+  },
+  "NewsCred": {
+    "url": "https://www.newscred.com/"
+  },
+  "The Free Ride": {
+    "url": "http://thefreeride.com/"
+  },
+  "Amalgam": {
+    "url": "http://amalgam.co/"
+  },
+  "ViTA World": {
+    "url": "http://vita.world/"
+  },
+  "InsuraMatch": {
+    "url": "https://www.insuramatch.com/"
+  },
+  "Foray Collective": {
+    "url": "https://www.shopforay.com/"
+  },
+  "Extra Mile": {
+    "url": "https://extramile.thehartford.com/"
+  },
+  "Kele": {
+    "url": "https://www.kele.com/"
+  }
 };
 
 class CaseStudies extends Component {
@@ -22,7 +44,7 @@ class CaseStudies extends Component {
     const caseTiles = Object.keys(caseStudyList)
       .map(client => {
         return (
-          <CaseStudy client={client} link={caseStudyList[client]} key={client}/>
+          <CaseStudy client={client} link={caseStudyList[client].url} key={client}/>
         );
       })
 
