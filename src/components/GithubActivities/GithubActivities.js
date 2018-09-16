@@ -9,18 +9,26 @@ class GithubActivities extends Component {
   constructor() {
     super();
 
-    this.toggle = this.toggle.bind(this);
-
     this.state = {
       events: [],
-      toolTipOpen: false
+      pushTerms: [
+        'I pushed code to ',
+        'I lost my soul and sanity in ',
+        'I hopefully didn\'t let too many bugs loose in ',
+        'I wrote some tasteful lines of code in ',
+        'I gave blood, sweat and tears in adding to ',
+        'I sat at home instead of going out to work on '
+      ],
+      starTerms: [
+        'I starred ',
+        'I discovered and loved '
+      ],
+      createTerms: [
+        'I birthed ',
+        'I created ',
+        'I made my latest creation, '
+      ]
     }
-  }
-
-  toggle() {
-    this.setState({
-      tooltipOpen: !this.state.tooltipOpen
-    });
   }
 
   componentDidMount() {
@@ -28,7 +36,7 @@ class GithubActivities extends Component {
     .then(results => {
       return results.json();
     }).then(data => {
-      let eventsData = data.slice(0, 8);
+      let eventsData = data.slice(0, 5);
       this.setState({
         events: eventsData
       })
@@ -36,16 +44,19 @@ class GithubActivities extends Component {
   }
 
   render() {
+    let pushTerm = this.state.pushTerms;
+    let starTerm = this.state.starTerms;
+    let createTerm = this.state.createTerms;
 
     let defineVerbiage = (obj, term) => {
       if (term.includes('Push')) {
-        return 'pushed code to '
+        return pushTerm[Math.floor(Math.random()*pushTerm.length)]
       } else if (term.includes('Watch')) {
-        return 'starred '
+        return starTerm[Math.floor(Math.random()*starTerm.length)]
       } else if (term.includes('Pull')) {
         return 'created a pull request in '
       } else if ( (obj.payload.ref_type === 'repository') && (term.includes('Create')) ) {
-        return 'created the repository ';
+        return createTerm[Math.floor(Math.random()*createTerm.length)]
       } else if ( (term.includes('Create') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag'))) ) {
         return 'created a ' + obj.payload.ref_type + ' in ';
       } else if ( (term.includes('Delete') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag'))) ) {
@@ -60,11 +71,10 @@ class GithubActivities extends Component {
         let eventObj = this.state.events[event];
         let typeVerbiage = defineVerbiage(eventObj, eventObj.type);
         let timeSince = moment(eventObj.created_at).fromNow();
-        let eventLine = 'I ' + typeVerbiage + ' the repo ' + eventObj.repo.name + ' ' + timeSince;
         return (
           <Media key={eventObj.id}>
             <Media body>
-              {eventLine}
+              {typeVerbiage + ' the repo '} <span>{eventObj.repo.name}</span> {' ' + timeSince}
             </Media>
           </Media>
         );
@@ -72,7 +82,7 @@ class GithubActivities extends Component {
 
     return (
       <section className="row gh" id="gh">
-        <h2 className="col-12">Wonder what I've been developing lately? <a className="hover-link" href="https://youtu.be/i-QadwBCqQw?t=67" target="_blank">Check it out</a> below</h2>
+        <h2 className="col-12">Wonder what I've been doing lately? <a className="hover-link" href="https://youtu.be/i-QadwBCqQw?t=67" target="_blank">Check it out</a> below</h2>
         <div className="media-container">
           <Feedtip />
           {ghEvents}

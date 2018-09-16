@@ -12,19 +12,19 @@ const profile = (props) => (
     <div className="profile-bio">
       <h1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Nam sed tellus id magna elementum tincidunt.</h1>
       <div className="social-icons">
-        <a href="" target="_blank">
+        <a href="https://github.com/bsterno" target="_blank">
           <img src={githubIcon} />
         </a>
-        <a href="" target="_blank">
+        <a href="https://www.linkedin.com/in/sternbrian/" target="_blank">
           <img src={linkedinIcon} />
         </a>
-        <a href="" target="_blank">
+        <a href="https://twitter.com/bstern90" target="_blank">
           <img src={twitterIcon} />
         </a>
-        <a href="" target="_blank">
+        <a href="https://www.instagram.com/bsterno/" target="_blank">
           <img src={instagramIcon} />
         </a>
-        <a href="" target="_blank">
+        <a href="mailto:briansternhk@gmail.com?Subject=Hey!">
           <img src={mailIcon} />
         </a>
       </div>

@@ -10,7 +10,7 @@ const caseStudy = (props) => {
     <div className="col-sm-6 d-flex">
       <Card>
         <a href={props.link} target="_blank">
-          <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+          <CardImg top width="100%" src={props.image} alt="Card image cap" />
         </a>
         <CardBody>
           <CardTitle><a className="hover-link" href={props.link} target="_blank">{props.client}</a></CardTitle>
@@ -22,7 +22,8 @@ const caseStudy = (props) => {
 
 caseStudy.propTypes = {
   client: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
 }
 
 export default caseStudy;
