@@ -21,11 +21,12 @@
 .card .card-img-top {
   -webkit-filter: grayscale(80%);
   filter: grayscale(80%);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
-.card .card-img-top:hover {
+.card .card-img-top:hover, .card .card-img-top.hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
+  transform: scale(1.05);
 }

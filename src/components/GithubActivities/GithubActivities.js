@@ -10,24 +10,7 @@ class GithubActivities extends Component {
     super();
 
     this.state = {
-      events: [],
-      pushTerms: [
-        'I pushed code to ',
-        'I lost my soul and sanity in ',
-        'I hopefully didn\'t let too many bugs loose in ',
-        'I wrote some tasteful lines of code in ',
-        'I gave blood, sweat and tears in adding to ',
-        'I sat at home instead of going out to work on '
-      ],
-      starTerms: [
-        'I starred ',
-        'I discovered and loved '
-      ],
-      createTerms: [
-        'I birthed ',
-        'I created ',
-        'I made my latest creation, '
-      ]
+      events: []
     }
   }
 
@@ -43,20 +26,38 @@ class GithubActivities extends Component {
     })
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.events != nextState.events;
+  }
+
   render() {
-    let pushTerm = this.state.pushTerms;
-    let starTerm = this.state.starTerms;
-    let createTerm = this.state.createTerms;
+    const pushTerms = [
+      'I pushed code to ',
+      'I lost my soul and sanity in ',
+      'I hopefully didn\'t let too many bugs loose in ',
+      'I wrote some tasteful lines of code in ',
+      'I gave blood, sweat and tears in adding to ',
+      'I sat at home instead of going out to work on '
+    ];
+    const starTerms = [
+      'I starred ',
+      'I discovered and loved '
+    ];
+    const createTerms = [
+      'I birthed ',
+      'I created ',
+      'I made my latest creation, '
+    ];
 
     let defineVerbiage = (obj, term) => {
       if (term.includes('Push')) {
-        return pushTerm[Math.floor(Math.random()*pushTerm.length)]
+        return pushTerms[Math.floor(Math.random()*pushTerms.length)]
       } else if (term.includes('Watch')) {
-        return starTerm[Math.floor(Math.random()*starTerm.length)]
+        return starTerms[Math.floor(Math.random()*starTerms.length)]
       } else if (term.includes('Pull')) {
         return 'created a pull request in '
       } else if ( (obj.payload.ref_type === 'repository') && (term.includes('Create')) ) {
-        return createTerm[Math.floor(Math.random()*createTerm.length)]
+        return createTerms[Math.floor(Math.random()*createTerms.length)]
       } else if ( (term.includes('Create') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag'))) ) {
         return 'created a ' + obj.payload.ref_type + ' in ';
       } else if ( (term.includes('Delete') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag'))) ) {

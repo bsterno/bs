@@ -97,7 +97,7 @@ a.hover-link:hover:after, a.hover-link:focus:after {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.25s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 .tool-tip:hover {
