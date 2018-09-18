@@ -61,3 +61,29 @@
 .social-icons a:hover img {
   opacity: 1;
 }
+
+@media (max-width: 550px) {
+  .profile {
+    padding: 60px 0 30px 0 !important;
+  }
+
+  .profile-bio {
+    width: 90%;
+  }
+
+  .profile-bio h1 {
+    padding: 2.5vh 0;
+  }
+
+  .profile-bio:before {
+    top: -2.5vh;
+  }
+
+  .profile-bio:after {
+    bottom: -2.5vh;
+  }
+
+  .social-icons {
+    padding: 2.5vh 0;
+  }
+}

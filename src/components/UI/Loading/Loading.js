@@ -1,6 +1,6 @@
 import React from 'react'
 //
-import loadingIcon from '../../../assets/images/0kvtMLE.gif';
+import loadingIcon from '../../../assets/images/duck.gif';
 import './Loading.css'
 
 const loading = () => (
