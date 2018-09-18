@@ -25,7 +25,7 @@
   transition: .2s ease-in-out;
 }
 
-.card .card-img-top:hover, .card .card-img-top.hover {
+.card .card-img-top:hover, .card.hover .card-img-top {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   transform: scale(1.05);

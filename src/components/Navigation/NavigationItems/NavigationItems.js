@@ -6,10 +6,10 @@ import githubIcon from '../../../assets/images/icons/github.png'
 
 export default () => (
   <nav>
-    <Link to="#gh" className="nav-icon">
+    <Link to="/#work">Work</Link>
+    <Link to="/#gh" className="nav-icon">
       <img src={githubIcon} />
     </Link>
-    <Link to="#work">Work</Link>
     {/* <Link to="/about">About</Link>
     <Link to="/blog">Blog</Link> */}
   </nav>

@@ -37,7 +37,8 @@ class GithubActivities extends Component {
       'I hopefully didn\'t let too many bugs loose in ',
       'I wrote some tasteful lines of code in ',
       'I gave blood, sweat and tears in adding to ',
-      'I sat at home instead of going out to work on '
+      'I sat at home instead of going out to work on ',
+      'Code flowed like electricity from my fingers into '
     ];
     const starTerms = [
       'I starred ',
@@ -46,7 +47,8 @@ class GithubActivities extends Component {
     const createTerms = [
       'I birthed ',
       'I created ',
-      'I made my latest creation, '
+      'I made my latest creation, ',
+      'I gave birth to '
     ];
 
     let defineVerbiage = (obj, term) => {

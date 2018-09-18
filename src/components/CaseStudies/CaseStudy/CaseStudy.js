@@ -23,13 +23,13 @@ class CaseStudy extends Component {
   }
 
   render(props) {
-    const cardImgClass = this.state.isHovered ? "card-img-top hover" : "";
+    const hoverClass = this.state.isHovered ? "hover" : "";
 
     return (
       <div className="col-sm-6 d-flex">
-        <Card>
-          <a href={this.props.link} target="_blank">
-            <CardImg className={cardImgClass} top width="100%" src={this.props.image} alt="Card image cap" />
+        <Card className={hoverClass}>
+          <a href={this.props.link} target="_blank" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
+            <CardImg top width="100%" src={this.props.image} alt="Card image cap" />
           </a>
           <CardBody>
             <CardTitle><a className="hover-link" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} href={this.props.link} target="_blank">{this.props.client}</a></CardTitle>

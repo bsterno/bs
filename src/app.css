@@ -72,17 +72,17 @@ a.hover-link:after {
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-a.hover-link:hover:before, a.hover-link:hover:after, a.hover-link:focus:before, a.hover-link:focus:after {
+a.hover-link:hover:before, a.hover-link:hover:after, .hover a.hover-link:before, .hover a.hover-link:after, a.hover-link:focus:before, a.hover-link:focus:after {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
-a.hover-link:hover:before, a.hover-link:focus:before {
+a.hover-link:hover:before, .hover a.hover-link:before, a.hover-link:focus:before {
   transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-a.hover-link:hover:after, a.hover-link:focus:after {
+a.hover-link:hover:after, .hover a.hover-link:after, a.hover-link:focus:after {
   transition: opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
