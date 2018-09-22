@@ -58,13 +58,13 @@ class GithubActivities extends Component {
       } else if (term.includes('Watch')) {
         return starTerms[Math.floor(Math.random()*starTerms.length)]
       } else if (term.includes('Pull')) {
-        return 'created a pull request in '
+        return 'I created a pull request in '
       } else if ( (obj.payload.ref_type === 'repository') && (term.includes('Create')) ) {
         return createTerms[Math.floor(Math.random()*createTerms.length)]
       } else if ( (term.includes('Create') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag'))) ) {
-        return 'created a ' + obj.payload.ref_type + ' in ';
+        return 'I created a ' + obj.payload.ref_type + ' in ';
       } else if ( (term.includes('Delete') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag'))) ) {
-        return 'deleted a ' + obj.payload.ref_type + ' in ';
+        return 'I deleted a ' + obj.payload.ref_type + ' in ';
       } else {
         return term
       }

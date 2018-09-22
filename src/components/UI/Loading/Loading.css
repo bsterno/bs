@@ -9,12 +9,18 @@
   top: 0;
 }
 
-.load-screen img {
-  max-width: 200px;
+.load-screen .load-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.load-screen .load-icon {
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
 }
 
 .loading-leave {
@@ -24,4 +30,19 @@
 .loading-leave.loading-leave-active {
   opacity: 0.01;
   transition: opacity 0.25s ease-out;
+}
+
+.built-with {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.built-with p {
+  margin: 0;
+}
+
+.built-with img {
+  height: 35px;
+  width: auto
 }
