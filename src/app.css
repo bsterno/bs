@@ -24,15 +24,24 @@ section.row {
   padding: 60px 0;
 }
 
+.heading {
+  padding-bottom: 60px;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .content {
     padding: 1rem 2rem;
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 576px) {
   h1 {
     font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
   }
 
   section.row {

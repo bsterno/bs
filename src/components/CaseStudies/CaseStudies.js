@@ -12,23 +12,24 @@ import insuramatchImg from '../../assets/images/Projects/Insuramatch.png'
 import forayImg from '../../assets/images/Projects/Foray.png'
 import emImg from '../../assets/images/Projects/ExtraMile.png'
 import keleImg from '../../assets/images/Projects/Kele.png'
+import bassett from '../../assets/images/Projects/Bassett.png'
 
 const caseStudyList = {
   "Norman and Jules": {
     "url": "https://normanandjules.com/",
     "image": njImg
   },
-  "Progressive Punctuation": {
-    "url": "http://progressivepunctuation.com/",
-    "image": ppImg
-  },
-  "NewsCred Insights": {
-    "url": "https://insights.newscred.com/",
-    "image": ncInsightsImg
+  "Bassett Furniture": {
+    "url": "https://www.bassettfurniture.com/stores/",
+    "image": bassett
   },
   "NewsCred": {
     "url": "https://www.newscred.com/",
     "image": ncImg
+  },
+  "NewsCred Insights": {
+    "url": "https://insights.newscred.com/",
+    "image": ncInsightsImg
   },
   "The Free Ride": {
     "url": "http://thefreeride.com/",
@@ -38,6 +39,10 @@ const caseStudyList = {
     "url": "http://amalgam.co/",
     "image": amalgamImg
   },
+  "Progressive Punctuation": {
+    "url": "http://progressivepunctuation.com/",
+    "image": ppImg
+  },
   "ViTA World": {
     "url": "http://vita.world/",
     "image": vitaImg
@@ -46,10 +51,6 @@ const caseStudyList = {
     "url": "https://www.insuramatch.com/",
     "image": insuramatchImg
   },
-  "Foray Collective": {
-    "url": "https://www.shopforay.com/",
-    "image": forayImg
-  },
   "Extra Mile": {
     "url": "https://extramile.thehartford.com/",
     "image": emImg
@@ -57,6 +58,10 @@ const caseStudyList = {
   "Kele": {
     "url": "https://www.kele.com/",
     "image": keleImg
+  },
+  "Foray Collective": {
+    "url": "https://www.shopforay.com/",
+    "image": forayImg
   }
 };
 
@@ -71,6 +76,7 @@ class CaseStudies extends Component {
 
     return (
       <section className="row case-studies" id="work">
+        <h2 className="heading col-12">Featured Work</h2>
         {caseTiles}
       </section>
     )

@@ -51,6 +51,7 @@ body.page-404 .header {
 }
 
 .section-404 .floater {
+  max-height: 250px;
   max-width: 200px;
   margin: 10vh auto;
   display: block;

@@ -18,7 +18,7 @@
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  padding: 60px 0;
+  padding: 0 0 60px 0;
   position: relative;
 }
 
@@ -28,13 +28,13 @@
 
 .media-container .tool-tip {
   position: absolute;
-  top: 70px;
+  top: 0;
   left: 10%;
 }
 
 @media (max-width: 576px) {
   .media-container .tool-tip {
-    top: 14px;
+    top: -30px;
     left: 50%;
     transform: translateX(-50%);
   }

@@ -38,17 +38,18 @@ class GithubActivities extends Component {
       'I wrote some tasteful lines of code in ',
       'I gave blood, sweat and tears in adding to ',
       'I sat at home instead of going out to work on ',
-      'Code flowed like electricity from my fingers into '
+      'Code flowed like electricity from my fingers into ',
+      'I unleashed a torrent of code into '
     ];
     const starTerms = [
       'I starred ',
-      'I discovered and loved '
+      'I discovered ',
+      'I stumbled upon '
     ];
     const createTerms = [
-      'I birthed ',
-      'I created ',
-      'I made my latest creation, ',
-      'I gave birth to '
+      // 'I created ',
+      'Ladies and Gentlemen, my latest creation ',
+      // 'I gave birth to '
     ];
 
     let defineVerbiage = (obj, term) => {
@@ -69,15 +70,20 @@ class GithubActivities extends Component {
       }
     }
 
+    function convertUrl(repoUrl) {
+      return repoUrl.replace('https://api.github.com/repos/', 'https://github.com/');
+    }
+
     const ghEvents = Object.keys(this.state.events)
       .map(event => {
         let eventObj = this.state.events[event];
         let typeVerbiage = defineVerbiage(eventObj, eventObj.type);
         let timeSince = moment(eventObj.created_at).fromNow();
+        let repoUrl = convertUrl(eventObj.repo.url);
         return (
           <Media key={eventObj.id}>
             <Media body>
-              {typeVerbiage + ' the repo '} <span>{eventObj.repo.name}</span> {' ' + timeSince}
+              {typeVerbiage + ' the repo '} <a className="hover-link" href={repoUrl} target="_blank">{eventObj.repo.name}</a> {' ' + timeSince}
             </Media>
           </Media>
         );
@@ -85,7 +91,7 @@ class GithubActivities extends Component {
 
     return (
       <section className="row gh" id="gh">
-        <h2 className="col-12">Wonder what I've been doing lately? <a className="hover-link" href="https://youtu.be/i-QadwBCqQw?t=67" target="_blank">Check it out</a> below</h2>
+        <h2 className="col-12 heading">Interested in what I've been doing lately? <a className="hover-link" href="https://youtu.be/i-QadwBCqQw?t=67" target="_blank">Check it out</a> below</h2>
         <div className="media-container">
           <Feedtip />
           {ghEvents}
