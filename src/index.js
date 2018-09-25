@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import ReactGA from 'react-ga'
 //
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -11,6 +12,9 @@ export default App
 
 // Render your app
 if (typeof document !== 'undefined') {
+  ReactGA.initialize('UA-126369929-1');
+  ReactGA.pageview(window.location.pathname + window.location.search);
+
   const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
   const render = Comp => {
     renderMethod(<Comp />, document.getElementById('root'))
