@@ -13,6 +13,7 @@ import forayImg from '../../assets/images/Projects/Foray.png'
 import emImg from '../../assets/images/Projects/ExtraMile.png'
 import keleImg from '../../assets/images/Projects/Kele.png'
 import bassett from '../../assets/images/Projects/Bassett.png'
+import tbImg from '../../assets/images/Projects/TedBaker.png'
 
 const caseStudyList = {
   "Norman and Jules": {
@@ -22,6 +23,10 @@ const caseStudyList = {
   "Bassett Furniture": {
     "url": "https://www.bassettfurniture.com/stores/",
     "image": bassett
+  },
+  "Ted Baker": {
+    "url": "https://www.tedbaker.com/stores/en_GB/",
+    "image": tbImg
   },
   "NewsCred": {
     "url": "https://www.newscred.com/",
