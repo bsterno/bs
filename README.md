@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4c4eaa32-08d8-4516-8a77-da35e1775fb8/deploy-status)](https://app.netlify.com/sites/bstern/deploys)
+
 # Personal Portfolio
 
 My site
