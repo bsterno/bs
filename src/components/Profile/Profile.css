@@ -104,11 +104,11 @@
   }
 
   .profile-bio {
-    width: 90%;
+    width: 100%;
   }
 
   .profile-bio h1 {
-    padding: 2.5vh 0;
+    padding: 3.5vh 0;
   }
 
   .profile-bio:before {
@@ -120,10 +120,16 @@
   }
 
   .profile-bio h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .profile-bio h3 a {
-    margin-bottom: 15px;
+    width: 180px;
+    margin-bottom: 12px;
+  }
+
+  .profile-bio h3 a img {
+    width: 100%;
+    height: auto;
   }
 
   .social-icons {
