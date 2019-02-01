@@ -38,7 +38,7 @@
 .profile-bio h1 {
   position: relative;
   color: #fff;
-  padding: 5vh 0;
+  padding: 5vh 0 6vh 0;
   margin: 0;
 }
 
@@ -59,8 +59,7 @@
 .profile-bio h3 a {
   display: inline-block;
   width: auto;
-  height: 1.4em;
-  margin-bottom: 19px;
+  margin-bottom: 11px;
   margin-left: 14px;
 }
 
@@ -72,7 +71,7 @@
 
 .profile-bio h3 a:hover img {
   transform: translateY(-4px);
-  opacity: .9;
+  /* opacity: .9; */
 }
 
 .profile-bio .hover-link {

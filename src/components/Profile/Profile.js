@@ -5,14 +5,14 @@ import instagramIcon from '../../assets/images/icons/instagram.png'
 import linkedinIcon from '../../assets/images/icons/linkedin.png'
 import mailIcon from '../../assets/images/icons/mail.png'
 import twitterIcon from '../../assets/images/icons/twitter.png'
-import brickworkLogo from '../../assets/images/Projects/brickwork.svg'
+import saLogo from '../../assets/images/Projects/sa-logo.png'
 import './Profile.css'
 
 const profile = (props) => (
   <section className="row profile">
     <div className="profile-bio">
       <h1>Hello. I'm Brian Stern - a <span>Web</span> & <span>App Developer</span> that gets a kick out of building beautiful interfaces for the web, currently living and working in NYC.</h1>
-      <h3>Working at <span><a href="https://www.brickworksoftware.com/" target="_blank"><img src={brickworkLogo} /></a></span></h3>
+      <h3>Working at <span><a href="https://smartasset.com/" target="_blank"><img src={saLogo} /></a></span></h3>
       <div className="social-icons">
         <a href="https://github.com/bsterno" target="_blank">
           <img src={githubIcon} />

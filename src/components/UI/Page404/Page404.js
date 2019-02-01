@@ -24,15 +24,13 @@ const Template2 = () => (
 
 const Template3 = () => (
   <div className="section-404">
-    <h1>404 - You found Nemo! Although I don't think that's what you were looking for...</h1>
+    <h1>404 - I think you may be lost.. but you did find Nemo!</h1>
     <img className="floater" src={nemo} />
     <Link className="back-home hover-link" exact to="/">Swim back home</Link>
   </div>
 )
 
 const templates = [
-  <Template1 />,
-  <Template2 />,
   <Template3 />
 ]
 

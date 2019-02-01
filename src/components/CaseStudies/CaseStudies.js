@@ -12,22 +12,11 @@ import insuramatchImg from '../../assets/images/Projects/Insuramatch.png'
 import forayImg from '../../assets/images/Projects/Foray.png'
 import emImg from '../../assets/images/Projects/ExtraMile.png'
 import keleImg from '../../assets/images/Projects/Kele.png'
-import bassett from '../../assets/images/Projects/Bassett.png'
+import bassettImg from '../../assets/images/Projects/Bassett.png'
 import tbImg from '../../assets/images/Projects/TedBaker.png'
+import saImg from '../../assets/images/Projects/SA.png'
 
 const caseStudyList = {
-  "Norman and Jules": {
-    "url": "https://normanandjules.com/",
-    "image": njImg
-  },
-  "Bassett Furniture": {
-    "url": "https://www.bassettfurniture.com/stores/",
-    "image": bassett
-  },
-  "Ted Baker": {
-    "url": "https://www.tedbaker.com/stores/en_GB/",
-    "image": tbImg
-  },
   "NewsCred": {
     "url": "https://www.newscred.com/",
     "image": ncImg
@@ -35,6 +24,22 @@ const caseStudyList = {
   "NewsCred Insights": {
     "url": "https://insights.newscred.com/",
     "image": ncInsightsImg
+  },
+  "Norman and Jules": {
+    "url": "https://normanandjules.com/",
+    "image": njImg
+  },
+  "SmartAsset": {
+    "url": "https://smartasset.com/",
+    "image": saImg
+  },
+  "Bassett Furniture": {
+    "url": "https://www.bassettfurniture.com/stores/",
+    "image": bassettImg
+  },
+  "Ted Baker": {
+    "url": "https://www.tedbaker.com/stores/en_GB/",
+    "image": tbImg
   },
   "The Free Ride": {
     "url": "http://thefreeride.com/",
