@@ -31,6 +31,8 @@ const Template3 = () => (
 )
 
 const templates = [
+  <Template1 />,
+  <Template2 />,
   <Template3 />
 ]
 
