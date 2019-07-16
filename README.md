@@ -64,4 +64,4 @@ To get started, run `react-static create` and use the `basic-prismic` template.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://brianstern.codes/404) file for details
