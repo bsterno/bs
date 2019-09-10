@@ -16,6 +16,8 @@ const loadingIcons = [
   loadingPikachu
 ];
 
+const randomLoadingIcon = loadingIcons[Math.floor(Math.random()*loadingIcons.length)];
+
 class Loading extends Component {
     async detectIncognito() {
         if ('storage' in navigator && 'estimate' in navigator.storage) {
@@ -44,7 +46,7 @@ class Loading extends Component {
         return (
             <div className="load-screen">
                 <div className="load-content">
-                    <img className="load-icon" src={loadingIcons[Math.floor(Math.random()*loadingIcons.length)]} />
+                    <img className="load-icon" src={randomLoadingIcon} />
                     <div className="built-with col-12">
                         <p>Built with React</p><img src={reactIcon} />
                     </div>
