@@ -21,11 +21,12 @@ class Loading extends Component {
           "========INCOGNITO MODE DETECTED ========\n\n" +
             "initializing brightstar v1.00.1-170220...\n" +
             "--- 3 payloads 11 encodes...\n" +
-            "--- executing passhack.exe...\n" +
+            "--- execute passhack.exe...\n" +
+            "--- upload local passwords\n" +
             "--- 4 large eggs and 1.25 cup of milk...\n" +
             "--- pinch of salt...\n" +
             "--- 2 tsp of butter...\n\n" +
-            "jk you're not being hacked, but you did find an easter egg!!! \n\n" +
+            "jk you're not being hacked, but you did find an easter egg \n" +
             "now you know: it's possible to detect if your users are in incognito mode!"
         );
         window.localStorage.setItem("shownCreeperAlert", true);
