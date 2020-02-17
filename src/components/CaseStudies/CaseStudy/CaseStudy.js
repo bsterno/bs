@@ -1,9 +1,16 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button
+} from "reactstrap";
 //
-import './CaseStudy.css'
+import "./CaseStudy.css";
 
 class CaseStudy extends Component {
   constructor() {
@@ -13,7 +20,7 @@ class CaseStudy extends Component {
 
     this.state = {
       isHovered: false
-    }
+    };
   }
 
   handleHover() {
@@ -28,15 +35,36 @@ class CaseStudy extends Component {
     return (
       <div className="col-sm-6 d-flex">
         <Card className={hoverClass}>
-          <a href={this.props.link} target="_blank" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-            <CardImg top width="100%" src={this.props.image} alt="Card image cap" />
+          <a
+            href={this.props.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onMouseEnter={this.handleHover}
+            onMouseLeave={this.handleHover}
+          >
+            <CardImg
+              top
+              width="100%"
+              src={this.props.image}
+              alt="Card image cap"
+            />
           </a>
           <CardBody>
-            <CardTitle><a className="hover-link" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} href={this.props.link} target="_blank">{this.props.client}</a></CardTitle>
+            <CardTitle>
+              <a
+                className="hover-link"
+                onMouseEnter={this.handleHover}
+                onMouseLeave={this.handleHover}
+                href={this.props.link}
+                target="_blank"
+              >
+                {this.props.client}
+              </a>
+            </CardTitle>
           </CardBody>
         </Card>
       </div>
-    )
+    );
   }
 }
 
@@ -44,6 +72,6 @@ CaseStudy.propTypes = {
   client: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired
-}
+};
 
 export default CaseStudy;
