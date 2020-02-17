@@ -11,7 +11,7 @@ import './Profile.css'
 const profile = (props) => (
   <section className="row profile">
     <div className="profile-bio">
-      <h1>Hello. I'm Brian Stern - a <span>Web</span> & <span>App Developer</span> that gets a kick out of building beautiful interfaces for the web, currently living and working in NYC.</h1>
+      <h1>Hello. I'm Brian Stern - a <span>Web</span> & <span>App Engineer</span> that gets a kick out of building beautiful interfaces for the web, currently living and working in NYC.</h1>
       <h3>Working at <span><a href="https://smartasset.com/" target="_blank"><img src={saLogo} /></a></span></h3>
       <div className="social-icons">
         <a href="https://github.com/bsterno" target="_blank">
