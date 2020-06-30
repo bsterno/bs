@@ -7,7 +7,7 @@ import ncInsightsImg from "../../assets/images/Projects/NewscredInsights.png";
 import ncImg from "../../assets/images/Projects/Newscred.png";
 import tfrImg from "../../assets/images/Projects/TFR.png";
 import amalgamImg from "../../assets/images/Projects/Amalgam.png";
-import vitaImg from "../../assets/images/Projects/vita.png";
+import vitaImg from "../../assets/images/Projects/vit.png";
 import insuramatchImg from "../../assets/images/Projects/Insuramatch.png";
 import forayImg from "../../assets/images/Projects/Foray.png";
 import emImg from "../../assets/images/Projects/ExtraMile.png";
