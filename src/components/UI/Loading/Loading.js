@@ -13,7 +13,7 @@ class Loading extends Component {
   async detectIncognito() {
     if ("storage" in navigator && "estimate" in navigator.storage) {
       const { usage, quota } = await navigator.storage.estimate();
-      console.log(`Using ${usage} out of ${quota} bytes.`);
+      // console.log(`Using ${usage} out of ${quota} bytes.`);
 
       if (quota < 120000000) {
         // Incognito

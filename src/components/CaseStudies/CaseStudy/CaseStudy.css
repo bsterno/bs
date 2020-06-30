@@ -10,23 +10,28 @@
   border-radius: 0;
 }
 
-.card .card-body {
+.card {
   color: #fff;
 }
 
-.card .card-body .card-title a {
+.card .card-title {
+  margin-top: 20px;
+}
+
+.card .card-title a {
   font-style: normal;
 }
 
 .card .card-img-top {
   -webkit-filter: grayscale(80%);
   filter: grayscale(80%);
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   border-radius: calc(0.25rem - 1px);
 }
 
-.card .card-img-top:hover, .card.hover .card-img-top {
+.card .card-img-top:hover,
+.card.hover .card-img-top {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   transform: scale(1.05);
