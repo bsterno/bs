@@ -41,7 +41,7 @@ const caseStudyList = {
     url: "https://www.tedbaker.com/stores/en_GB/",
     image: tbImg,
   },
-  "The Free Ride": {
+  "Circuit (Formerly The Free Ride)": {
     url: "http://thefreeride.com/",
     image: tfrImg,
   },
@@ -69,8 +69,8 @@ const caseStudyList = {
     url: "https://www.kele.com/",
     image: keleImg,
   },
-  "Foray Collective": {
-    url: "https://www.shopforay.com/",
+  "Foray Collective (No longer exists)": {
+    url: "/oops",
     image: forayImg,
   },
 };
