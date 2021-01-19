@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,700");
 
+@font-face {
+  font-family: "Neon-Glow";
+  src: url("./assets/fonts/neon-glow-light.otf") format("opentype");
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 300;

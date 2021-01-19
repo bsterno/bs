@@ -14,25 +14,25 @@
 }
 
 .profile-bio:before {
-  content: '';
+  content: "";
   position: absolute;
   top: -5vh;
   height: 1px;
   width: 65px;
   left: 50%;
   transform: translateX(-50%);
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .profile-bio:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5vh;
   height: 1px;
   width: 65px;
   left: 50%;
   transform: translateX(-50%);
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .profile-bio h1 {
@@ -46,31 +46,33 @@
   font-weight: 700;
 }
 
-.profile-bio h3 {
+.profile-bio h4 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.profile-bio h3 a {
+.profile-bio h4 a {
   display: block;
 }
 
-.profile-bio h3 a {
+.profile-bio h4 a {
   display: inline-block;
   width: auto;
   margin-bottom: 11px;
   margin-left: 14px;
 }
 
-.profile-bio h3 a img {
-  height: 100%;
+.profile-bio h4 a img {
+  height: 24px;
   width: auto;
-  transition: all .2s ease-in-out;
 }
 
-.profile-bio h3 a:hover img {
-  transform: translateY(-4px);
+.profile-bio h4 a:hover img {
+  -webkit-transform: rotate(10deg); /* WebKit */
+  -moz-transform: rotate(10deg); /* Firefox */
+  -o-transform: rotate(10deg); /* Opera */
+  transform: rotate(10deg); /* Standard */
   /* opacity: .9; */
 }
 
@@ -119,15 +121,15 @@
     bottom: -2.5vh;
   }
 
-  .profile-bio h3 {
+  .profile-bio h4 {
     font-size: 1.2rem;
   }
-  .profile-bio h3 a {
+  .profile-bio h4 a {
     width: 180px;
     margin-bottom: 12px;
   }
 
-  .profile-bio h3 a img {
+  .profile-bio h4 a img {
     width: 100%;
     height: auto;
   }

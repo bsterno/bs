@@ -32,19 +32,17 @@ class GithubActivities extends Component {
 
   render() {
     const pushTerms = [
-      'I pushed code to ',
       'I lost my soul and sanity in ',
-      'I hopefully didn\'t let too many bugs loose in ',
+      'I let lose some venemous bugs in ',
       'I wrote some tasteful lines of code in ',
-      'I gave blood, sweat and tears in adding to ',
-      'I sat at home instead of going out to work on ',
       'Code flowed like electricity from my fingers into ',
-      'I unleashed a torrent of code into '
+      'I unleashed a torrent of code into ',
+      'I slammed my keyboard and merged to production in '
     ];
     const starTerms = [
-      'I starred ',
+      'I found ',
       'I discovered ',
-      'I stumbled upon '
+      'I found this through r/webdev or a github weekly post - '
     ];
     const createTerms = [
       // 'I created ',
@@ -83,7 +81,7 @@ class GithubActivities extends Component {
         return (
           <Media key={eventObj.id}>
             <Media body>
-              {typeVerbiage + ' the repo '} <a className="hover-link" href={repoUrl} target="_blank">{eventObj.repo.name}</a> {' ' + timeSince}
+              {typeVerbiage } <a className="hover-link" href={repoUrl} target="_blank">{eventObj.repo.name}</a> {' ' + timeSince}
             </Media>
           </Media>
         );

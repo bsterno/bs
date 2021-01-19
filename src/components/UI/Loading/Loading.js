@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 //
 import reactIcon from "../../../assets/images/icons/react.png";
 import loadingPikachu from "../../../assets/images/loading-icons/pikachu.gif";
@@ -10,6 +10,14 @@ const randomLoadingIcon =
   loadingIcons[Math.floor(Math.random() * loadingIcons.length)];
 
 class Loading extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true
+    }
+  }
+
+
   async detectIncognito() {
     if ("storage" in navigator && "estimate" in navigator.storage) {
       const { usage, quota } = await navigator.storage.estimate();
@@ -44,17 +52,29 @@ class Loading extends Component {
     }
   }
 
+  componentDidMount() {
+    setTimeout( () => this.setState({ loading: false }), 4200 );
+  }
+
   render() {
     return (
-      <div className="load-screen">
-        <div className="load-content">
-          <img className="load-icon" src={randomLoadingIcon} />
-          <div className="built-with col-12">
-            <p>Built with React</p>
-            <img src={reactIcon} />
+      <Fragment>
+      { this.state.loading ? 
+        <Fragment>
+          <div className="load-screen">
+            <div className="load-content">
+            <div className="sign">
+              <span className="fast-flicker">w</span>elco<span className="flicker">m</span>e
+            </div>
+              <div className="built-with col-12">
+                <p>Built with React</p>
+                <img src={reactIcon} alt="react icon" />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </Fragment>
+      : null }
+      </Fragment>
     );
   }
 }
