@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import moment from 'moment';
 import { Media } from 'reactstrap';
 import Feedtip from './Feedtip.js';
@@ -16,14 +16,12 @@ class GithubActivities extends Component {
 
   componentDidMount() {
     fetch('https://api.github.com/users/bsterno/events')
-    .then(results => {
-      return results.json();
-    }).then(data => {
-      let eventsData = data.slice(0, 5);
-      this.setState({
-        events: eventsData
+      .then(results => results.json()).then(data => {
+        const eventsData = data.slice(0, 5);
+        this.setState({
+          events: eventsData
+        })
       })
-    })
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -33,7 +31,7 @@ class GithubActivities extends Component {
   render() {
     const pushTerms = [
       'I lost my soul and sanity in ',
-      'I let lose some venemous bugs in ',
+      'I let lose some venomous bugs in ',
       'I wrote some tasteful lines of code in ',
       'Code flowed like electricity from my fingers into ',
       'I unleashed a torrent of code into ',
@@ -50,22 +48,22 @@ class GithubActivities extends Component {
       // 'I gave birth to '
     ];
 
-    let defineVerbiage = (obj, term) => {
+    const defineVerbiage = (obj, term) => {
       if (term.includes('Push')) {
-        return pushTerms[Math.floor(Math.random()*pushTerms.length)]
+        return pushTerms[Math.floor(Math.random() * pushTerms.length)]
       } else if (term.includes('Watch')) {
-        return starTerms[Math.floor(Math.random()*starTerms.length)]
+        return starTerms[Math.floor(Math.random() * starTerms.length)]
       } else if (term.includes('Pull')) {
         return 'I created a pull request in '
-      } else if ( (obj.payload.ref_type === 'repository') && (term.includes('Create')) ) {
-        return createTerms[Math.floor(Math.random()*createTerms.length)]
-      } else if ( (term.includes('Create') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag'))) ) {
-        return 'I created a ' + obj.payload.ref_type + ' in ';
-      } else if ( (term.includes('Delete') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag'))) ) {
-        return 'I deleted a ' + obj.payload.ref_type + ' in ';
-      } else {
-        return term
+      } else if ((obj.payload.ref_type === 'repository') && (term.includes('Create'))) {
+        return createTerms[Math.floor(Math.random() * createTerms.length)]
+      } else if ((term.includes('Create') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag')))) {
+        return `I created a ${obj.payload.ref_type} in `;
+      } else if ((term.includes('Delete') && ((obj.payload.ref_type === 'branch') || (obj.payload.ref_type === 'tag')))) {
+        return `I deleted a ${obj.payload.ref_type} in `;
       }
+      return term
+
     }
 
     function convertUrl(repoUrl) {
@@ -74,14 +72,14 @@ class GithubActivities extends Component {
 
     const ghEvents = Object.keys(this.state.events)
       .map(event => {
-        let eventObj = this.state.events[event];
-        let typeVerbiage = defineVerbiage(eventObj, eventObj.type);
-        let timeSince = moment(eventObj.created_at).fromNow();
-        let repoUrl = convertUrl(eventObj.repo.url);
+        const eventObj = this.state.events[event];
+        const typeVerbiage = defineVerbiage(eventObj, eventObj.type);
+        const timeSince = moment(eventObj.created_at).fromNow();
+        const repoUrl = convertUrl(eventObj.repo.url);
         return (
           <Media key={eventObj.id}>
             <Media body>
-              {typeVerbiage } <a className="hover-link" href={repoUrl} target="_blank">{eventObj.repo.name}</a> {' ' + timeSince}
+              {typeVerbiage} <a className="hover-link" href={repoUrl} target="_blank">{eventObj.repo.name}</a> {` ${timeSince}`}
             </Media>
           </Media>
         );

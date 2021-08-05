@@ -8,7 +8,10 @@ import Loading from '../UI/Loading/Loading.js'
 import Head from '../Head/Head.js'
 
 class Layout extends Component {
-  render () {
+  render() {
+
+    const isIndexPage = window.location.pathname === "/";
+
     return (
       <Fragment>
         <Head />
@@ -16,7 +19,7 @@ class Layout extends Component {
           transitionName="loading"
           transitionEnterTimeout={0}
           transitionLeaveTimeout={300}>
-          <Loading />
+          {isIndexPage && <Loading />}
         </ReactCSSTransitionGroup>
         <Header />
         <div className="content">
