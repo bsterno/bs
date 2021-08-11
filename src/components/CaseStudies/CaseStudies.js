@@ -17,21 +17,21 @@ import tbImg from "../../assets/images/Projects/TedBaker.png";
 import saImg from "../../assets/images/Projects/SA.png";
 
 const caseStudyList = {
-  NewsCred: {
-    url: "https://www.newscred.com/",
-    image: ncImg,
-  },
-  "NewsCred Insights": {
-    url: "https://insights.newscred.com/",
-    image: ncInsightsImg,
+  SmartAsset: {
+    url: "https://smartasset.com/",
+    image: saImg,
   },
   "Norman and Jules": {
     url: "https://normanandjules.com/",
     image: njImg,
   },
-  SmartAsset: {
-    url: "https://smartasset.com/",
-    image: saImg,
+  Amalgam: {
+    url: "http://amalgam.co/",
+    image: amalgamImg,
+  },
+  "Progressive Punctuation": {
+    url: "http://progressivepunctuation.com/",
+    image: ppImg,
   },
   "Bassett Furniture": {
     url: "https://www.bassettfurniture.com/stores/",
@@ -41,17 +41,13 @@ const caseStudyList = {
     url: "https://www.tedbaker.com/stores/en_GB/",
     image: tbImg,
   },
-  "Circuit (Formerly The Free Ride)": {
-    url: "http://thefreeride.com/",
-    image: tfrImg,
+  "Welcome (Formerly NewsCred": {
+    url: "https://www.newscred.com/",
+    image: ncImg,
   },
-  Amalgam: {
-    url: "http://amalgam.co/",
-    image: amalgamImg,
-  },
-  "Progressive Punctuation": {
-    url: "http://progressivepunctuation.com/",
-    image: ppImg,
+  "Welcome Software (Formerly NewsCred Insights)": {
+    url: "https://insights.newscred.com/",
+    image: ncInsightsImg,
   },
   "ViTA World": {
     url: "http://vita.world/",
@@ -65,6 +61,10 @@ const caseStudyList = {
     url: "https://extramile.thehartford.com/",
     image: emImg,
   },
+  "Circuit (Formerly The Free Ride)": {
+    url: "http://thefreeride.com/",
+    image: tfrImg,
+  },
   Kele: {
     url: "https://www.kele.com/",
     image: keleImg,
@@ -77,16 +77,14 @@ const caseStudyList = {
 
 class CaseStudies extends Component {
   render() {
-    const caseTiles = Object.keys(caseStudyList).map((client) => {
-      return (
+    const caseTiles = Object.keys(caseStudyList).map((client) => (
         <CaseStudy
           client={client}
           link={caseStudyList[client].url}
           image={caseStudyList[client].image}
           key={client}
         />
-      );
-    });
+      ));
 
     return (
       <section className="row case-studies" id="work">
