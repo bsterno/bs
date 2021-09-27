@@ -35,6 +35,7 @@ class CaseStudy extends Component {
       <div className="col-sm-6 d-flex">
         <Card className={hoverClass}>
           <a
+            className="image-wrapper"
             href={this.props.link}
             target="_blank"
             rel="noopener noreferrer"

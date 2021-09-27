@@ -1,38 +1,43 @@
 .card {
-  border-radius: 0;
-  background-color: transparent;
-  width: 100%;
-  margin-bottom: 20px;
-  border: none;
+	border-radius: 0;
+	background-color: transparent;
+	width: 100%;
+	margin-bottom: 20px;
+	border: none;
 }
 
 .card .card-image-top {
-  border-radius: 0;
+	border-radius: 0;
 }
 
 .card {
-  color: #fff;
+	color: #fff;
+}
+
+.card .image-wrapper {
+	max-height: 270px;
+	overflow: hidden;
 }
 
 .card .card-title {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 .card .card-title a {
-  font-style: normal;
+	font-style: normal;
 }
 
 .card .card-img-top {
-  -webkit-filter: grayscale(80%);
-  filter: grayscale(80%);
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  border-radius: calc(0.25rem - 1px);
+	-webkit-filter: grayscale(80%);
+	filter: grayscale(80%);
+	-webkit-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	border-radius: calc(0.25rem - 1px);
 }
 
 .card .card-img-top:hover,
 .card.hover .card-img-top {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
-  transform: scale(1.05);
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+	transform: scale(1.05);
 }
