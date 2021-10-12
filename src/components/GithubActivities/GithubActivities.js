@@ -31,7 +31,7 @@ class GithubActivities extends Component {
   render() {
     const pushTerms = [
       'I lost my soul and sanity in ',
-      'I let lose some venomous bugs in ',
+      'I let loose some venomous bugs in ',
       'I wrote some tasteful lines of code in ',
       'Code flowed like electricity from my fingers into ',
       'I unleashed a torrent of code into ',
