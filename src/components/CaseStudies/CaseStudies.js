@@ -67,7 +67,7 @@ const caseStudyList = {
     image: ncImg,
   },
   "Optimizely Software (Formerly NewsCred Insights)": {
-    url: "https://insights.newscred.com/",
+    url: "/oops",
     image: ncInsightsImg,
   },
   "ViTA World": {

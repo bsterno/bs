@@ -5,7 +5,6 @@ import instagramIcon from '../../assets/images/icons/instagram.png'
 import linkedinIcon from '../../assets/images/icons/linkedin.png'
 import mailIcon from '../../assets/images/icons/mail.png'
 import twitterIcon from '../../assets/images/icons/twitter.png'
-import saLogo from '../../assets/images/Projects/sa-logo.png'
 import coaLogo from '../../assets/images/Projects/coa-logo.svg'
 import './Profile.css'
 
