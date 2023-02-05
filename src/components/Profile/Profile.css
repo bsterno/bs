@@ -59,8 +59,12 @@
 .profile-bio h4 a {
   display: inline-block;
   width: auto;
-  margin-bottom: 11px;
-  margin-left: 14px;
+  margin-bottom: 7px;
+  margin-left: 12px;
+}
+
+.profile-bio span {
+  transition: all 0.2s ease 0s;
 }
 
 .profile-bio h4 a img {
@@ -68,11 +72,11 @@
   width: auto;
 }
 
-.profile-bio h4 a:hover img {
-  -webkit-transform: rotate(10deg); /* WebKit */
-  -moz-transform: rotate(10deg); /* Firefox */
-  -o-transform: rotate(10deg); /* Opera */
-  transform: rotate(10deg); /* Standard */
+.profile-bio span:hover {
+  -webkit-transform: scale(1.10) rotate(2deg); /* WebKit */
+  -moz-transform: scale(1.10) rotate(2deg); /* Firefox */
+  -o-transform: scale(1.10) rotate(2deg); /* Opera */
+  transform: scale(1.10) rotate(2deg); /* Standard */
   /* opacity: .9; */
 }
 
@@ -123,15 +127,6 @@
 
   .profile-bio h4 {
     font-size: 1.2rem;
-  }
-  .profile-bio h4 a {
-    width: 180px;
-    margin-bottom: 12px;
-  }
-
-  .profile-bio h4 a img {
-    width: 100%;
-    height: auto;
   }
 
   .social-icons {

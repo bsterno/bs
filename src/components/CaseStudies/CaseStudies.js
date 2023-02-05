@@ -1,31 +1,52 @@
 import React, { Component } from "react";
 //
 import CaseStudy from "./CaseStudy/CaseStudy.js";
+import amalgamImg from "../../assets/images/Projects/Amalgam.png";
+import bassettImg from "../../assets/images/Projects/Bassett.png";
+import coaMarketing from "../../assets/images/Projects/CoaMarketing.png";
+import coaMobileApp from "../../assets/images/Projects/CoaMobileApp.png";
+import coaWebApp from "../../assets/images/Projects/CoaWebApp.png";
+import emImg from "../../assets/images/Projects/ExtraMile.png";
+import forayImg from "../../assets/images/Projects/Foray.png";
+import insuramatchImg from "../../assets/images/Projects/Insuramatch.png";
+import keleImg from "../../assets/images/Projects/Kele.png";
+import ncImg from "../../assets/images/Projects/Newscred.png";
+import ncInsightsImg from "../../assets/images/Projects/NewscredInsights.png";
 import njImg from "../../assets/images/Projects/NJ.png";
 import ppImg from "../../assets/images/Projects/PP.png";
-import ncInsightsImg from "../../assets/images/Projects/NewscredInsights.png";
-import ncImg from "../../assets/images/Projects/Newscred.png";
-import tfrImg from "../../assets/images/Projects/TFR.png";
-import amalgamImg from "../../assets/images/Projects/Amalgam.png";
-import vitaImg from "../../assets/images/Projects/vit.png";
-import insuramatchImg from "../../assets/images/Projects/Insuramatch.png";
-import forayImg from "../../assets/images/Projects/Foray.png";
-import emImg from "../../assets/images/Projects/ExtraMile.png";
-import keleImg from "../../assets/images/Projects/Kele.png";
-import bassettImg from "../../assets/images/Projects/Bassett.png";
-import tbImg from "../../assets/images/Projects/TedBaker.png";
 import saImg from "../../assets/images/Projects/SA.png";
+import smartAdvisor from "../../assets/images/Projects/SmartAdvisor.png";
+import tbImg from "../../assets/images/Projects/TedBaker.png";
+import tfrImg from "../../assets/images/Projects/TFR.png";
+import vitaImg from "../../assets/images/Projects/vit.png";
+import circuitMobileApp from "../../assets/images/Projects/CircuitMobileApp.png";
 
 const caseStudyList = {
-  SmartAsset: {
+  "Coa - Web App": {
+    url: "https://app.joincoa.com/",
+    image: coaWebApp,
+  },
+  "Coa - Mobile App": {
+    url: "https://apps.apple.com/us/app/coa-mental-health/id1644918032",
+    image: coaMobileApp,
+  },
+  "Coa - Marketing Site": {
+    url: "https://joincoa.com/",
+    image: coaMarketing
+  },
+  "SmartAsset": {
     url: "https://smartasset.com/",
     image: saImg,
+  },
+  "SmartAdvisor": {
+    url: "https://smartadvisormatch.com/",
+    image: smartAdvisor,
   },
   "Norman and Jules": {
     url: "https://normanandjules.com/",
     image: njImg,
   },
-  Amalgam: {
+  "Amalgam": {
     url: "http://amalgam.co/",
     image: amalgamImg,
   },
@@ -41,11 +62,11 @@ const caseStudyList = {
     url: "https://www.tedbaker.com/stores/en_GB/",
     image: tbImg,
   },
-  "Welcome (Formerly NewsCred": {
+  "Optimizely (Formerly NewsCred)": {
     url: "https://www.newscred.com/",
     image: ncImg,
   },
-  "Welcome Software (Formerly NewsCred Insights)": {
+  "Optimizely Software (Formerly NewsCred Insights)": {
     url: "https://insights.newscred.com/",
     image: ncInsightsImg,
   },
@@ -53,7 +74,7 @@ const caseStudyList = {
     url: "http://vita.world/",
     image: vitaImg,
   },
-  InsuraMatch: {
+  "InsuraMatch": {
     url: "https://www.insuramatch.com/",
     image: insuramatchImg,
   },
@@ -61,11 +82,15 @@ const caseStudyList = {
     url: "https://extramile.thehartford.com/",
     image: emImg,
   },
-  "Circuit (Formerly The Free Ride)": {
-    url: "http://thefreeride.com/",
+  "Ride Circuit": {
+    url: "https://www.ridecircuit.com/",
     image: tfrImg,
   },
-  Kele: {
+  "Ride Circuit - Mobile App": {
+    url: "https://apps.apple.com/us/app/id988052033",
+    image:   circuitMobileApp
+  },
+  "Kele": {
     url: "https://www.kele.com/",
     image: keleImg,
   },
