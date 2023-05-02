@@ -7,6 +7,7 @@ import GithubActivities from '../components/GithubActivities/GithubActivities.js
 import Profile from '../components/Profile/Profile.js'
 import Contact from '../components/Contact/Contact.js'
 import Loading from '../components/UI/Loading/Loading.js'
+import Background from '../components/Background/Background.js'
 
 export default withSiteData(() => (
   <Fragment>
@@ -16,6 +17,7 @@ export default withSiteData(() => (
       transitionLeaveTimeout={300}>
       <Loading />
     </ReactCSSTransitionGroup>
+    <Background />
     <Profile />
     <CaseStudies />
     <GithubActivities />
