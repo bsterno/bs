@@ -54,14 +54,6 @@ const caseStudyList = {
     url: "http://progressivepunctuation.com/",
     image: ppImg,
   },
-  "Bassett Furniture": {
-    url: "https://www.bassettfurniture.com/stores/",
-    image: bassettImg,
-  },
-  "Ted Baker": {
-    url: "https://www.tedbaker.com/stores/en_GB/",
-    image: tbImg,
-  },
   "Optimizely (Formerly NewsCred)": {
     url: "https://www.newscred.com/",
     image: ncImg,
@@ -69,6 +61,14 @@ const caseStudyList = {
   "Optimizely Software (Formerly NewsCred Insights)": {
     url: "/oops",
     image: ncInsightsImg,
+  },
+  "Ride Circuit": {
+    url: "https://www.ridecircuit.com/",
+    image: tfrImg,
+  },
+  "Ride Circuit - Mobile App": {
+    url: "https://apps.apple.com/us/app/id988052033",
+    image:   circuitMobileApp
   },
   "ViTA World": {
     url: "http://vita.world/",
@@ -82,13 +82,13 @@ const caseStudyList = {
     url: "https://extramile.thehartford.com/",
     image: emImg,
   },
-  "Ride Circuit": {
-    url: "https://www.ridecircuit.com/",
-    image: tfrImg,
+  "Bassett Furniture": {
+    url: "https://www.bassettfurniture.com/stores/",
+    image: bassettImg,
   },
-  "Ride Circuit - Mobile App": {
-    url: "https://apps.apple.com/us/app/id988052033",
-    image:   circuitMobileApp
+  "Ted Baker": {
+    url: "https://www.tedbaker.com/stores/en_GB/",
+    image: tbImg,
   },
   "Kele": {
     url: "https://www.kele.com/",
