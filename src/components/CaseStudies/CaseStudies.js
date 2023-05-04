@@ -54,11 +54,11 @@ const caseStudyList = {
     url: "http://progressivepunctuation.com/",
     image: ppImg,
   },
-  "Optimizely (Formerly NewsCred)": {
+  "NewsCred (Acquired by Optimizely)": {
     url: "https://www.newscred.com/",
     image: ncImg,
   },
-  "Optimizely Software (Formerly NewsCred Insights)": {
+  "NewsCred Insights Software (Acquired by Optimizely)": {
     url: "/oops",
     image: ncInsightsImg,
   },
